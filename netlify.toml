@@ -1,0 +1,41 @@
+# Netlify build + deploy configuration for the 3D portfolio
+# Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--no-audit --no-fund"
+
+# SPA fallback — serve index.html for any unknown route
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Static asset caching (long cache for hashed build assets)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache the face image so the hologram loads fast on repeat visits
+[[headers]]
+  for = "/me.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/me.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Security / embedding headers (lets the site run in iframe previews)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "ALLOWALL"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
