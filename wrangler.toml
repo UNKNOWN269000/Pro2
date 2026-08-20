@@ -1,7 +1,13 @@
-# Cloudflare Pages / Workers config for the 3D portfolio
-# Deploy with:  npx wrangler pages deploy dist
-# Docs: https://developers.cloudflare.com/pages/configuration/wrangler-configuration/
+# Cloudflare Workers (static assets) config for the 3D portfolio
+# Deploy with:  npx wrangler deploy
+# The [build] step runs `vite build` automatically before uploading ./dist.
+# Docs: https://developers.cloudflare.com/workers/static-assets/
 
 name = "jaseem-3d-portfolio"
 compatibility_date = "2026-08-20"
-pages_build_output_dir = "dist"
+
+[build]
+command = "npm run build"
+
+[assets]
+directory = "./dist"
