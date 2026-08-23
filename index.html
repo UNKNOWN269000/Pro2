@@ -3,115 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JASEEM NIZARDEEN — 3D Holographic Profile</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/style.css" />
+  <title>Blank</title>
+  <style>
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      background: #000;
+    }
+  </style>
 </head>
-<body>
-
-  <!-- tall spacer that drives the scroll-driven animation -->
-  <div class="scroll-space" style="height:680vh"></div>
-
-  <!-- 3D canvas (fixed, behind everything) -->
-  <div id="webgl"></div>
-
-  <!-- CRT scanlines + vignette -->
-  <div class="fx fx-scan"></div>
-  <div class="fx fx-vignette"></div>
-
-  <!-- scroll progress rail -->
-  <div class="scroll-rail"><div class="scroll-rail__track"><span id="scrollFill"></span></div></div>
-
-  <!-- HUD data chips (projected onto the 3D head) -->
-  <div class="hud" id="hud">
-    <div class="hud-chip hud-chip--top" id="chipTop"><i></i>SUBJECT&nbsp;//&nbsp;JASEEM.N</div>
-    <div class="hud-chip hud-chip--left" id="chipLeft"><i></i>SCAN&nbsp;<span id="chipScan">00</span>%</div>
-    <div class="hud-chip hud-chip--right" id="chipRight"><i></i>STATUS&nbsp;:&nbsp;ONLINE</div>
-  </div>
-
-  <!-- ============ SECTIONS (fixed overlay) ============ -->
-  <main class="overlay">
-
-    <!-- 01 / HERO -->
-    <section class="section section--hero" id="sec-hero">
-      <div class="hero-inner">
-        <p class="eyebrow">PERSONAL&nbsp;PROFILE&nbsp;//&nbsp;HOLOGRAPHIC&nbsp;SCAN</p>
-        <h1 class="glitch" data-text="JASEEM NIZARDEEN">JASEEM NIZARDEEN</h1>
-        <p class="role">WEB&nbsp;DEVELOPER<span class="caret"></span></p>
-        <p class="hint">SCROLL&nbsp;TO&nbsp;SCAN&nbsp;&#8595;</p>
-      </div>
-    </section>
-
-    <!-- 02 / SKILLS -->
-    <section class="section section--right" id="sec-skills">
-      <div class="panel">
-        <p class="eyebrow">02&nbsp;//&nbsp;CAPABILITIES</p>
-        <h2>SKILLS&nbsp;MATRIX</h2>
-        <div class="chips">
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">React</span>
-          <span class="chip">TypeScript</span>
-          <span class="chip">VBA</span>
-          <span class="chip">SQL</span>
-        </div>
-        <div class="bars">
-          <div class="bar"><span>HTML / CSS</span><b><i style="--v:95%"></i></b><em>95%</em></div>
-          <div class="bar"><span>JavaScript</span><b><i style="--v:88%"></i></b><em>88%</em></div>
-          <div class="bar"><span>React</span><b><i style="--v:90%"></i></b><em>90%</em></div>
-          <div class="bar"><span>TypeScript</span><b><i style="--v:82%"></i></b><em>82%</em></div>
-          <div class="bar"><span>SQL</span><b><i style="--v:80%"></i></b><em>80%</em></div>
-          <div class="bar"><span>VBA</span><b><i style="--v:75%"></i></b><em>75%</em></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 03 / ABOUT / ORIGIN -->
-    <section class="section section--right" id="sec-about">
-      <div class="panel">
-        <p class="eyebrow">03&nbsp;//&nbsp;ORIGIN</p>
-        <h2>ABOUT</h2>
-        <p class="lead">I craft fast, clean web experiences — turning ideas into interactive, glowing reality.</p>
-        <div class="loc">
-          <span class="pin"><i></i></span>
-          <div>
-            <strong>Kattankudy 01, Batticaloa</strong>
-            <small>Sri Lanka&nbsp;&nbsp;&#9670;&nbsp;&nbsp;GMT +5:30</small>
-          </div>
-        </div>
-        <div class="coords">7.6874&deg; N&nbsp;&nbsp;/&nbsp;&nbsp;81.7280&deg; E</div>
-      </div>
-    </section>
-
-    <!-- 04 / CONTACT -->
-    <section class="section section--right" id="sec-contact">
-      <div class="panel">
-        <p class="eyebrow">04&nbsp;//&nbsp;ESTABLISH&nbsp;LINK</p>
-        <h2>CONTACT</h2>
-        <p class="lead">Available for freelance &amp; collaborations.</p>
-        <div class="contact-row">
-          <a class="btn btn--primary" href="tel:+94759825269">
-            <span class="btn-label">CALL</span><span class="btn-val">+94 75 982 5269</span>
-          </a>
-          <a class="btn" href="https://wa.me/94759825269" target="_blank" rel="noopener">
-            <span class="btn-label">WHATSAPP</span><span class="btn-val">chat now &#8599;</span>
-          </a>
-        </div>
-        <p class="foot">© 2026 Jaseem Nizardeen — built with Three.js</p>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- boot loader -->
-  <div class="loader" id="loader">
-    <div class="loader-ring"></div>
-    <p class="loader-text">INITIALIZING&nbsp;HOLOGRAM<span id="loaderPct">0%</span></p>
-  </div>
-
-  <script type="module" src="/src/main.js"></script>
-</body>
+<body></body>
 </html>
