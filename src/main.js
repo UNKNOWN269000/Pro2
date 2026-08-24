@@ -1,3 +1,4 @@
+import './style.css';
 import * as THREE from 'three';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
@@ -434,6 +435,26 @@ const scrollFill = document.getElementById('scrollFill');
 const loader = document.getElementById('loader');
 const loaderPct = document.getElementById('loaderPct');
 const barFills = document.querySelectorAll('.bar b i');
+const codeStream = document.querySelector('[data-code-stream] code');
+const terminalFeed = document.getElementById('terminalFeed');
+const metricCpu = document.getElementById('metricCpu');
+const metricNet = document.getElementById('metricNet');
+const metricUi = document.getElementById('metricUi');
+
+const codeSnippets = [
+  "const portfolio = new Hologram({ status: 'online' });\nawait portfolio.scanAvatar();\nrenderSkills(['React', 'TypeScript', 'SQL']);\nconnect('/contact', { secure: true });",
+  "function buildInterface(user) {\n  const glow = shader.compile('cyan-bloom');\n  return deploy({ user, mode: 'futuristic' });\n}\nbuildInterface('Jaseem');",
+  "SELECT skill, level FROM matrix\nWHERE profile = 'Jaseem Nizardeen';\nUPDATE ui SET state = 'running'\nCOMMIT TRANSMISSION;",
+  "interface Project {\n  stack: ['HTML', 'CSS', 'JavaScript'];\n  responseTime: 'fast';\n  status: 'ready';\n}"
+];
+const terminalLines = [
+  'avatar mesh synchronized',
+  'programming UI stream running',
+  'shader bloom pipeline stable',
+  'contact uplink encrypted',
+  'code matrix refreshed',
+  'portfolio telemetry online'
+];
 
 const chipPoints = [
   { el: chipTop, p: new THREE.Vector3(0, 4.18, 0) },
@@ -481,11 +502,33 @@ const lookTarget = new THREE.Vector3();
 const v = new THREE.Vector3();
 let loaderDone = false;
 let loaderP = 0;
+let codeTick = 0;
+let terminalTick = 0;
+let codeIndex = 0;
+
+function updateProgrammingUi(t) {
+  if (codeStream && t - codeTick > 2.35) {
+    codeTick = t;
+    codeIndex = (codeIndex + 1) % codeSnippets.length;
+    codeStream.textContent = codeSnippets[codeIndex];
+  }
+  if (terminalFeed && t - terminalTick > 1.25) {
+    terminalTick = t;
+    const line = document.createElement('p');
+    line.innerHTML = `<em>&gt;</em> ${terminalLines[Math.floor(t * 10) % terminalLines.length]}`;
+    terminalFeed.appendChild(line);
+    while (terminalFeed.children.length > 4) terminalFeed.removeChild(terminalFeed.firstElementChild);
+  }
+  if (metricCpu) metricCpu.textContent = `${Math.floor(38 + Math.sin(t * 1.7) * 16 + Math.sin(t * 4.1) * 4)}%`;
+  if (metricNet) metricNet.textContent = `${Math.floor(16 + Math.sin(t * 2.2) * 7)}ms`;
+  if (metricUi) metricUi.textContent = Math.sin(t * 3) > -0.2 ? 'SYNC' : 'RUN';
+}
 
 function animate() {
   requestAnimationFrame(animate);
   const dt = Math.min(clock.getDelta(), 0.05);
   const t = clock.elapsedTime;
+  updateProgrammingUi(t);
 
   // smooth scroll
   current += (target - current) * 0.08;
