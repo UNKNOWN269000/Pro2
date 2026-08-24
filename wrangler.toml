@@ -3,7 +3,7 @@
 # The [build] step runs `vite build` automatically before uploading ./dist.
 # Docs: https://developers.cloudflare.com/workers/static-assets/
 
-name = "jaseem-3d-portfolio"
+name = "pro2"
 compatibility_date = "2026-08-20"
 
 [build]

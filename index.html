@@ -3,15 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blank</title>
-  <style>
-    html, body {
-      width: 100%;
-      min-height: 100%;
-      margin: 0;
-      background: #000;
-    }
-  </style>
+  <meta name="theme-color" content="#050814" />
+  <title>Jaseem Nizardeen — Holographic Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body></body>
+<body>
+  <div id="webgl" aria-hidden="true"></div>
+
+  <div class="code-background" aria-hidden="true">
+    <div class="circuit-grid"></div>
+    <div class="data-rain data-rain--left">01001101<br>function deploy()<br>const ui = 'online'<br>npm run build<br>while(true) scan()<br>interface NeuralLink<br>SELECT * FROM skills<br>git push origin main</div>
+    <div class="data-rain data-rain--right">SYSTEM ACTIVE<br>React.render(App)<br>API latency 18ms<br>shader.compile()<br>portfolio.boot()<br>await initAvatar()<br>SQL CONNECTED<br>ACCESS GRANTED</div>
+
+    <div class="tech-window tech-window--code">
+      <div class="window-bar"><span></span><span></span><span></span><b>neural-ui.js</b></div>
+      <pre data-code-stream><code>const portfolio = new Hologram({ status: 'online' });
+await portfolio.scanAvatar();
+renderSkills(['React', 'TypeScript', 'SQL']);
+connect('/contact', { secure: true });</code></pre>
+    </div>
+
+    <div class="tech-window tech-window--terminal">
+      <div class="window-bar"><span></span><span></span><span></span><b>runtime_console</b></div>
+      <div class="terminal-feed" id="terminalFeed">
+        <p><em>></em> boot sequence initialized</p>
+        <p><em>></em> compiling holographic interface</p>
+        <p><em>></em> scanning code matrix</p>
+        <p><em>></em> status: running</p>
+      </div>
+    </div>
+
+    <div class="system-stack">
+      <div class="metric-card"><small>CPU</small><strong id="metricCpu">42%</strong><i></i></div>
+      <div class="metric-card"><small>NET</small><strong id="metricNet">18ms</strong><i></i></div>
+      <div class="metric-card"><small>UI</small><strong id="metricUi">SYNC</strong><i></i></div>
+    </div>
+
+    <div class="scanner-panel">
+      <div class="scanner-line"></div>
+      <span>PROGRAMMING UI RUNNING</span>
+    </div>
+  </div>
+
+  <div class="fx fx-scan" aria-hidden="true"></div>
+  <div class="fx fx-vignette" aria-hidden="true"></div>
+
+  <div class="hud" id="hud" aria-hidden="true">
+    <div class="hud-chip" id="chipTop"><i></i> FACIAL MAP ACTIVE</div>
+    <div class="hud-chip" id="chipLeft"><i></i> ID: JN-DEV-094</div>
+    <div class="hud-chip hud-chip--right" id="chipRight"><i></i> SCAN <span id="chipScan">00</span>%</div>
+  </div>
+
+  <main class="overlay">
+    <section class="section section--hero" id="sec-hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Holographic Web Developer</p>
+        <h1 class="glitch" data-text="JASEEM NIZARDEEN">JASEEM NIZARDEEN</h1>
+        <p class="role">WEB DEVELOPER<span class="caret"></span></p>
+        <p class="hint">SCROLL TO RUN FULL BODY SCAN</p>
+      </div>
+    </section>
+
+    <section class="section section--right" id="sec-skills">
+      <div class="panel">
+        <p class="eyebrow">Skill Matrix</p>
+        <h2>Code Systems</h2>
+        <div class="chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">React</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">VBA</span>
+          <span class="chip">SQL</span>
+        </div>
+        <div class="bars">
+          <div class="bar"><span>Frontend</span><b><i style="--v: 92%"></i></b><em>92%</em></div>
+          <div class="bar"><span>React</span><b><i style="--v: 86%"></i></b><em>86%</em></div>
+          <div class="bar"><span>Database</span><b><i style="--v: 78%"></i></b><em>78%</em></div>
+          <div class="bar"><span>Automation</span><b><i style="--v: 82%"></i></b><em>82%</em></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--right" id="sec-about">
+      <div class="panel">
+        <p class="eyebrow">About Node</p>
+        <h2>Building futuristic digital interfaces.</h2>
+        <p class="lead">I create responsive web experiences with clean code, sharp visuals, and practical business logic.</p>
+        <div class="loc">
+          <div class="pin"><i></i></div>
+          <div>
+            <strong>Kattankudy 01</strong>
+            <small>Batticaloa, Sri Lanka</small>
+          </div>
+        </div>
+        <p class="coords">COORDINATES LOCKED · AVAILABLE FOR PROJECTS</p>
+      </div>
+    </section>
+
+    <section class="section section--right" id="sec-contact">
+      <div class="panel">
+        <p class="eyebrow">Contact Uplink</p>
+        <h2>Start a project transmission.</h2>
+        <p class="lead">Let’s build a polished website, application UI, dashboard, or automation system.</p>
+        <div class="contact-row">
+          <a class="btn btn--primary" href="tel:+94759825269">
+            <span><span class="btn-label">CALL</span><span class="btn-val">+94 75 982 5269</span></span>
+            <b>↗</b>
+          </a>
+          <a class="btn" href="https://wa.me/94759825269" target="_blank" rel="noreferrer">
+            <span><span class="btn-label">WHATSAPP</span><span class="btn-val">Send Message</span></span>
+            <b>↗</b>
+          </a>
+        </div>
+        <p class="foot">SYSTEM READY · RESPONSE CHANNEL OPEN</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="scroll-rail" aria-hidden="true"><div class="scroll-rail__track"><div id="scrollFill"></div></div></div>
+  <div class="scroll-space" aria-hidden="true"></div>
+
+  <div class="loader" id="loader" aria-live="polite">
+    <div class="loader-ring"></div>
+    <div class="loader-text"><span>INITIALIZING 3D PROFILE</span><span id="loaderPct">0%</span></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
